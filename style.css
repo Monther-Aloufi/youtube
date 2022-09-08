@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "section section aside"
+    "section section aside";
+  grid-template-rows: 56px 1fr 50px;
+  grid-template-columns: 15% 1fr 18%;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+hr {
+  /* text-decoration: none; */
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+/*--------------- HEADER ---------------*/
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-areas: "left center center center right";
+}
+
+.icons {
+  width: 25px;
+}
+
+/*---------- RIGHT ----------*/
+.right-header {
+  grid-area: right;
+  direction: rtl;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.menu {
+  margin-left: 10px;
+}
+
+.logo svg {
+  width: 100px;
+}
+
+/*---------- CENTER ----------*/
+.center-header {
+  grid-area: center;
+  direction: rtl;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  width: 40%;
+  height: 70%;
+  border: 1px solid #bbb;
+  border-left: none;
+  padding: 5px;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.search-icon {
+  height: 70%;
+  background-color: #eee;
+  padding: 10px;
+  width: 50px;
+  border: 1px solid #bbb;
+}
+
+.mic-icon {
+  background-color: #eee;
+  padding: 9px 10px;
+  width: 45px;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+
+/*---------- LEFT ----------*/
+.left-header {
+  grid-area: left;
+}
+
+.img-email {
+  width: 55px;
+  height: 55px;
+  border-radius: 100px;
+  padding: 5px;
+  margin-left: 15px;
+}
+
+.left-header .icons {
+  padding-bottom: 12px;
+}
+
+/*--------------- END HEADER ---------------*/
+/*--------------- SECTION ---------------*/
+section {
+  grid-area: section;
+}
+
+/*--------------- END SECTION ---------------*/
+/*--------------- ASIDE ---------------*/
+aside {
+  grid-area: aside;
+}
+
+.card {
+  direction: rtl;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #eee;
+}
+
+.card:first-child {
+  margin-top: 10px;
+}
+
+.card .title {
+  position: relative;
+  left: -10px;
+}
+
+/*--------------- END ASIDE ---------------*/
