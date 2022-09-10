@@ -13,7 +13,7 @@ body {
     "header header header"
     "section section aside"
     "section section aside";
-  grid-template-rows: 56px 1fr 50px;
+  grid-template-rows: 66px 1fr 50px;
   grid-template-columns: 15% 1fr 18%;
   font-family: "Vazirmatn", sans-serif;
 }
@@ -115,6 +115,47 @@ header {
 /*--------------- SECTION ---------------*/
 section {
   grid-area: section;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  overflow-y: scroll;
+}
+
+section .card {
+  width: 75%;
+  margin-left: 12.5%;
+  margin-bottom: 15%;
+  direction: rtl;
+  cursor: pointer;
+}
+
+section .card:hover .three-dot {
+  opacity: 1;
+}
+
+.img-video {
+  /* position: relative; */
+  width: 100%;
+}
+
+.name-video {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+}
+
+.three-dot {
+  opacity: 0;
+}
+
+.name-channel {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.dv {
+  font-size: 14px;
+  color: #aaa;
 }
 
 /*--------------- END SECTION ---------------*/
@@ -131,15 +172,15 @@ aside .card {
   cursor: pointer;
 }
 
-.card:hover {
+aside .card:hover {
   background-color: #eee;
 }
 
-.card:first-child {
+aside .card:first-child {
   margin-top: 10px;
 }
 
-.card .title {
+aside .card .title {
   position: relative;
   left: -10px;
 }
